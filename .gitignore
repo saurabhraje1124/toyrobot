@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# command file for toy robot
+command-file.txt
+
