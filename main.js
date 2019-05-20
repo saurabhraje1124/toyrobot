@@ -16,8 +16,8 @@ const currentPosition = {
 
 let placeCommandFired = false; 
 
-const execReportCommand = (line) => {
-	console.log('Command ' + line + ' Current position: X: ' + currentPosition.x + ' Y: ' + currentPosition.y + ' Direction: ' + directions[currentPosition.f]);
+const execReportCommand = () => {
+	console.log('Current position: X: ' + currentPosition.x + ' Y: ' + currentPosition.y + ' Direction: ' + directions[currentPosition.f]);
 };
 
 const execPlaceCommand = (commandArr) => {
@@ -117,7 +117,7 @@ const processCommand = (line) => {
 						execPlaceCommand(commandArr);
 					break;
 					case 'REPORT':
-						execReportCommand(line);
+						execReportCommand();
 					break;
 					case 'MOVE':
 						execMoveCommand(commandArr);
