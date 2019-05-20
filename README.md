@@ -26,6 +26,6 @@ npm install
 
 ## Running the app
 ```
-node main.js
+node main.js --command-file=<PATH_TO_COMMAND_FILE>
 ```
 
