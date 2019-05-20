@@ -45,7 +45,6 @@ const execMoveCommand = (commandArr) => {
 						console.log('Invalid move');
 					} else {
 						currentPosition.y = parseInt(currentPosition.y) + 1;
-						console.log(currentPosition.y);
 					}
 				break;
 				case 'EAST':
@@ -53,7 +52,6 @@ const execMoveCommand = (commandArr) => {
 						console.log('Invalid move');
 					} else {
 						currentPosition.x = parseInt(currentPosition.x) + 1;
-						console.log(currentPosition.x);
 					}
 				break;
 				case 'SOUTH':
@@ -61,7 +59,6 @@ const execMoveCommand = (commandArr) => {
 						console.log('Invalid move');
 					} else {
 						currentPosition.y = parseInt(currentPosition.y) - 1;
-						console.log(currentPosition.y);
 					}
 				break;
 				case 'WEST':
@@ -69,7 +66,6 @@ const execMoveCommand = (commandArr) => {
 						console.log('Invalid move');
 					} else {
 						currentPosition.x = parseInt(currentPosition.x) - 1;
-						console.log(currentPosition.x);
 					}
 				break;
 			}
@@ -119,19 +115,16 @@ const processCommand = (line) => {
 				switch(commandArr[0]) {
 					case 'PLACE': 
 						execPlaceCommand(commandArr);
-						execReportCommand(line);
 					break;
 					case 'REPORT':
 						execReportCommand(line);
 					break;
 					case 'MOVE':
 						execMoveCommand(commandArr);
-						execReportCommand(line);
 					break;
 					case 'LEFT':
 					case 'RIGHT':
 						processLeftAndRightCommand(commandArr[0]);
-						execReportCommand(line);
 					break;
 					default: 
 						console.log('Invalid command')
